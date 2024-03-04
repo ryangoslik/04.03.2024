@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="all">
+    <input type="text" id="input"><button id="add" onclick="add()">Dodaj</button><button id="math" onclick="math()">Licz</button>
+    </div>   <div class="all1">
+    <div class="result" id="table_all_elements"></div>
+    <div class="result" id="result1"></div>
+    <div class="result" id="result2"></div>
+    <div class="result" id="result3"></div>
+            </div>
+    
+
+    <script>
+        let table = new Array();
+        var potega = new Array();
+        
+    function add(){
+        var a = document.getElementById("input").value
+        table.push(a);
+        document.getElementById("input").value = '';
+
+        
+    }
+
+function math(){
+    let table1 = "";
+    for(i=0; i<=table.lenght; i++){
+            table1 += table[i];
+        }
+        console.log(table1);
+    let sum = 0;
+    for (let i = 0; i < table.length; i++ ) {
+        sum += parseInt(table[i]) ;
+        console.log(typeof(table[i]))
+        var a = Math.pow(table[i], 3);
+        potega.push(a);
+        var result3 = document.getElementById("result3");
+          
+    }
+    document.getElementById("table_all_elements").textContent = table1;
+    document.getElementById("result1").textContent = sum;
+    document.getElementById("result2").textContent = potega;
+
+
+
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    background-color: grey;
+}
+.all{
+    display: flex;
+    justify-content: center;
+}
+.all1{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+input{
+    background-color: cadetblue;
+}
+.result{
+    margin: 1%;
+    min-height: 20px;
+    min-width: 200px;
+    height: auto;
+    width: auto;
+    margin-left: 5%;
+    border: 1px dotted bisque;
+    background-color: darkcyan;
+}
